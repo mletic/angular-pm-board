@@ -7,7 +7,7 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-    title = 'my-app';
+    title = 'angular-pm-board';
     toDoList = [];
     inProgressList = [];
     doneList = [];
