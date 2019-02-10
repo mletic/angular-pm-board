@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+.columns {
+    width: 100%;
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: 33% 33% 33%;
+
+    .columns--item {
+        height: 100vh;
+        border: 1px solid #333;
+        border-radius: 8px;
+        background-color: #dfe3e6;
+        font-family: Helvetica Neue,Arial,Helvetica,sans-serif;
+
+        .columns--item--title {
+            font-size: 24px;
+            text-align: center;
+            border-bottom: 1px solid green;
+
+            .columns--item--btn__add {
+                float: right;
+                margin-right: 8px;
+                color: rgba(34,139,34,1);
+                line-height: normal;
+                cursor: pointer;
+
+                &:hover {
+                    color: rgba(34,139,34,0.5);
+                }
+            }
+        }
+    }
+}
+
+
+.cdk-drag-placeholder {
+    opacity: 0;
+}
+
+.cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.columns--item.cdk-drop-list-dragging .task:not(.cdk-drag-placeholder) {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}

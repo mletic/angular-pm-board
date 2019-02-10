@@ -1,0 +1,30 @@
+<div class="columns" cdkDropListGroup>
+    <div class="columns--item" cdkDropList [cdkDropListData]="toDoList" (cdkDropListDropped)="drop($event)">
+        <div class="columns--item--title">
+            <span>To do</span>
+            <a class="columns--item--btn__add" (click)="addNewItem()">
+                <i class="fas fa-plus-square"></i>
+            </a>
+        </div>
+        <!-- <app-task *ngFor="let toDoTask of toDoList" [taskItem]="toDoTask" cdkDrag></app-task> -->
+        <div *ngFor="let toDoTask of toDoList" cdkDrag>
+            <app-task [taskItem]="toDoTask"></app-task>
+        </div>
+    </div>
+    <div class="columns--item" cdkDropList [cdkDropListData]="inProgressList" (cdkDropListDropped)="drop($event)">
+        <div class="columns--item--title">In progress</div>
+        <!-- <app-task *ngFor="let inProgressTask of inProgressList" [taskItem]="inProgressTask" cdkDrag></app-task> -->
+        <div *ngFor="let inProgressTask of inProgressList" cdkDrag>
+            <app-task [taskItem]="inProgressTask"></app-task>
+        </div>
+    </div>
+    <div class="columns--item" cdkDropList [cdkDropListData]="doneList" (cdkDropListDropped)="drop($event)">
+        <div class="columns--item--title">Done</div>
+        <!-- <app-task *ngFor="let doneTask of doneList" [taskItem]="doneTask" cdkDrag></app-task> -->
+        <div *ngFor="let doneTask of doneList" cdkDrag>
+            <app-task [taskItem]="doneTask"></app-task>
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

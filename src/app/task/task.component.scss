@@ -1,0 +1,50 @@
+.task {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    padding: 8px;
+    margin: 8px;
+    border: solid 1px #ccc;
+    border-radius: 4px;
+    color: rgba(0, 0, 0, 0.87);
+    box-shadow: 0 1px 0 rgba(9,45,66,.25);
+    cursor: move;
+    background: white;
+    font-size: 14px;
+
+    .task--labels {
+        display: flex;
+
+        .task--labels--label {
+            margin-right: 8px;
+            border-radius: 4px;
+            width: 56px;
+            height: 16px;
+        }
+    }
+
+    .task--name {
+        padding: 12px 0px 0px 0px;
+        font-size: 16px;
+    }
+
+    .task--da {
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        .task--da--dueDate {
+            align-self: end;
+            color: #b3b3b3;
+
+            i {
+                margin-right: 4px;
+            }
+        }
+        .task--da--asignees {
+            margin-left: auto;
+
+            img {
+                border-radius: 25px;
+            }
+        }
+    }
+}
