@@ -1,0 +1,11 @@
+<div class="columns--item" cdkDropList [cdkDropListData]="itemList" (cdkDropListDropped)="drop($event)">
+    <div class="columns--item--title">
+        <span>{{name}}</span>
+        <a class="columns--item--btn__add" (click)="addNewItem()">
+            <i class="fas fa-plus-square"></i>
+        </a>
+    </div>
+    <div *ngFor="let item of itemList" cdkDrag>
+        <app-task [taskItem]="item"></app-task>
+    </div>
+</div>

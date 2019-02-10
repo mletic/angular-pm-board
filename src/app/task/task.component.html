@@ -4,9 +4,9 @@
     </div>
     <div class="task--name">{{taskItem.name}}</div>
     <div class="task--da">
-        <div class="task--da--dueDate"><i class="far fa-calendar-alt"></i>{{taskItem.dueDate | date}}</div>
-        <div class="task--da--asignees">
-            <img [src]="'assets/img/' + taskItem.asignee + '.png'">
+        <div class="task--da--dueDate" *ngIf="taskItem.dueDate"><i class="far fa-calendar-alt"></i>{{taskItem.dueDate | date}}</div>
+        <div class="task--da--asignees" *ngIf="taskItem.asignee">
+            <img [src]="'./assets/img/' + taskItem.asignee + '.png'">
         </div>
     </div>
 </div>
