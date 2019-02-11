@@ -2,11 +2,12 @@
 .columns {
     width: 100%;
     display: grid;
-    grid-gap: 12px;
+    grid-gap: 4px;
     grid-template-columns: 33% 33% 33%;
 
     .columns--item {
         height: auto;
+        min-height: 200px;
         border: 1px solid #333;
         border-radius: 8px;
         background-color: #dfe3e6;

@@ -10,7 +10,14 @@ storiesOf('Task list component', module)
             declarations: [TaskComponent],
         })
     )
-    .add('with drag', () => ({
+    .add('without tasks', () => ({
+        component: TaskListComponent,
+        props: {
+            itemList: [],
+            name: 'To do'
+        },
+    }))
+    .add('with added tasks', () => ({
         component: TaskListComponent,
         props: {
             itemList: [
