@@ -1,5 +1,22 @@
-# MyApp
+# Angular Project Management Board
 
+This project is created to be used as a test project to demonstrate capababilities of [Storybook](https://storybook.js.org/) for Angular. It uses Angular Material 'Drag and drop' module.
+
+Live example of the project you can check out [HERE](https://mletic.github.io/angular-pm-board/).
+
+Storybook of the project you can check out [HERE](https://mletic.github.io/angular-pm-board/storybook/).
+
+In order to deploy the project on github pages you need to follow next steps:
+#### 1. Install dependencies
+`npm install`
+#### 2. Build project for production
+`ng build --prod --base-href='/angular-pm-board/'`
+#### 3. Build storybook for production (creates a sub-directory in dist folder)
+`npm run storybook-build`
+#### 4. Add project to github pages
+`npx angular-cli-ghpages`
+
+## Note
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
 
 ## Development server
